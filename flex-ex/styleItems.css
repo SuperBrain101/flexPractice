@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;/*makes the size(width & height) of all 
+    elements(*)...
+    to be apart of the content,padding, and border
+    ex: width(now) = content + padding + border;
+    width(before)AKA:box-sizing:content-box/Default
+    = width +(Padding & Border)
+    P.S. Allows for more controllable size and responsiveness!*/
+
+    /*Reset all elements as well as far as spacing:*/
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+/*display flex in the flex container so its children can be moved around:*/
+.flex-container{
+   display:flex;/*now it's a TRUE flex container!*/
+   /*to see the container:*/
+   background-color: plum;
+   /*move around main axis...Default is row/horizontal:*/
+   justify-content: space-between;
+   /*height:50px; --for the pattern from back*/
+   /*Now it's time to move with the cross axis..Default is column/vertical:*/
+   /*first add more height to show/fit vertical change:*/
+   height:400px;
+   /*Now move with cross axis:*/
+   align-items:center;
+ 
+}
+
+/*grabs all elements with the class of items AKA the flex items(in this case)*/
+.item{
+    width:100px;
+    height:100px;
+    background-color:darkslateblue;
+    border:3px solid gold;
+    color:lime;
+    /*all around add space:*/
+    margin:10px;
+}
+
+/*moving around a specific item:(use align-self)
+:nth-of-type(1) -- grabs an element more specifically*/
+.item:nth-of-type(3){
+    /*we are in the third .item element, so lets move differently*/
+    align-self: end;
+}
+
+
+
+/* for a nice pattern.back{
+    background-color: blanchedalmond;
+    height:100px;
+}*/
