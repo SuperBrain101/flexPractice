@@ -19,18 +19,22 @@ body{
 
 /*display flex in the flex container so its children can be moved around:*/
 .flex-container{
+    /*height:50px; --for the pattern from back*/
+    
    display:flex;/*now it's a TRUE flex container!*/
    /*to see the container:*/
    background-color: plum;
-   /*move around main axis...Default is row/horizontal:*/
-   justify-content: space-between;
-   /*height:50px; --for the pattern from back*/
-   /*Now it's time to move with the cross axis..Default is column/vertical:*/
-   /*first add more height to show/fit vertical change:*/
-   height:400px;
-   /*Now move with cross axis:*/
+   /*since flex direction is column we need to move vertically 
+   using(justify content) first add some height:*/
+   height:600px;
+   justify-content: end;
+   /*Now move with cross axis:(if flex-direction is column then
+   this will become horizontal movement) otherwise/default it's vertical*/
    align-items:center;
- 
+
+   /*Change main axis and cross axis away from their defaults:*/
+   flex-direction: column;
+ /*flex-direction: row-reverse; adds item1 to where item 3 was at and item 3 to where item1 is at*/
 }
 
 /*grabs all elements with the class of items AKA the flex items(in this case)*/
@@ -42,16 +46,31 @@ body{
     color:lime;
     /*all around add space:*/
     margin:10px;
+    /*center text within the element:*/
+    display:flex;
+    /*row is default so to move item horizontally(justify content):*/
+    justify-content: center;
+    /*to move verticallysince default is column:*/
+    align-items:center;
 }
 
 /*moving around a specific item:(use align-self)
 :nth-of-type(1) -- grabs an element more specifically*/
 .item:nth-of-type(3){
     /*we are in the third .item element, so lets move differently*/
-    align-self: end;
+    align-items: end; /*would move text vertically at end*/
+    
 }
 
+/*specifically pick the other item elements:*/
+.item:nth-of-type(1){
+    /*we are in the first .item element, so lets move differently*/
+   
 
+.item:nth-of-type(2){
+    /*we are in the second .item element, so lets move differently*/
+    
+}
 
 /* for a nice pattern.back{
     background-color: blanchedalmond;
