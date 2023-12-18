@@ -30,7 +30,10 @@ body{
    height:400px;
    /*Now move with cross axis:*/
    align-items:center;
- 
+   /*flex-wrap adds to the items to the  next line when the webpage is 
+   no longer able to fit a flex item(without adjusting its size to a smaller)
+   this is amazing for responsiveness
+   flex-wrap:wrap;         */
 }
 
 /*grabs all elements with the class of items AKA the flex items(in this case)*/
@@ -46,9 +49,22 @@ body{
 
 /*moving around a specific item:(use align-self)
 :nth-of-type(1) -- grabs an element more specifically*/
+.item:nth-of-type(1){
+  /*order: #   changes the order of the items
+  (kinda chooses like nth-of-type)
+  Now item box will display as item2 in text since
+  we changed the item from item1 to item2*/
+  order:2;
+}
+
+.item:nth-of-type(2){
+ order:1;
+}
+
 .item:nth-of-type(3){
-    /*we are in the third .item element, so lets move differently*/
-    align-self: end;
+    /*with order:#; we have to specify which item is which if
+    we want full control(try deleting 'order:3; to see what happens)*/
+    order:3;
 }
 
 
