@@ -1,34 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Traverse Media's display flex practice</title>
-        <meta name="description" content="">
+        <meta name="description" content="creating a mock website using flex from traverse media youtube">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styleItems.css">
+        <!-- adding a google font:-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Kaushan+Script&display=swap" rel="stylesheet">
     </head>
     <body>
-      <div class ="flex-container">
-        <div class ="item">Item 1</div>
-        <div class ="item">Item 2</div>
-        <div class ="item">Item 3</div>
-        <!-- See what happens when more boxes are added:-->
-      <!--Needed to show flex wrap property-->
-    <!--
-        <div class ="item">Item 4</div>
-        <div class ="item">Item 5</div>
-        <div class ="item">Item 6</div>
-        <div class ="item">Item 7</div>
-        <div class ="item">Item 8</div>
-        <div class ="item">Item 9</div>
-        <div class ="item">Item 10</div>
-        <div class ="item">Item 11</div>
-        <div class ="item">Item 12</div>
-        <div class ="item">Item 13</div>
-      -->  
-      </div>
-      <!--<div class ="back"></div>Messing around though for some reason
-    the background color didn't show until after i randomly wrote here in the div-->
+
+      <nav>
+        <div class="container"><!--this div contains the content per section-->
+          <div class="logo">FlexBox</div>
+          <ul class="navbar">
+            <li><a href="#Home">Home</a></li>
+            <li><a href ="#About">About</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!--done with nav staring header now:-->
+      <header>
+        <div class="container">
+          <div>
+            <h1>FlexBox Crash Course</h1>
+            <p>
+              This crash course was created by Brad Traversy to help you learn the
+            basics of flexbox. Flexbox is a very important and useful tool in
+            CSS.
+            </p>
+          </div>
+          <img src="One_Step.png" alt="Cool Design with one step within the image">
+        </div>
+      </header>
+      <!-- done with header now creating the section of the page with 3 boxes:-->
+      <section class ="boxes">
+        <div class ="container">
+          <div class ="box">
+            <!--acts funny will look into FONTAWESOME later:<i class="fas fa-arrows-alt-v"></i>-->
+            <h2>Alignment & Space</h2>
+            <p> A more efficient way to lay out, align and distribute space among
+              items in a container</p>
+          </div>
+
+          <div class="box">
+            <h2>Tricky Positioning</h2>
+            <p>
+              Flexbox usually solves tricky problems including how to position or
+              dynamically resize elements on a page
+            </p>
+          </div>
+  
+          <div class="box">
+            <h2>Responsive Design</h2>
+            <p>
+              Flexbox makes building a website layout (and making it responsive!)
+              much, much easier
+            </p>
+          </div>
+        </div>
+      </section>
     </body>
 </html>

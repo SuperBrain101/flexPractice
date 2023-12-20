@@ -13,95 +13,28 @@
 }
 
 body{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Alfa Slab One', serif, 'Times New Roman', Times;
+    font-size:20px;
+    /*line-height--sets the distance between lines of text.*/
+    line-height:1.7;
+    color:rgba(36, 2, 72, 0.659);
+    background-image:linear-gradient(rgb(149, 130, 255),rgb(0, 255, 115)); 
+    
 
 }
 
-/*display flex in the flex container so its children can be moved around:*/
-.flex-container{
-   display:flex;/*now it's a TRUE flex container!*/
-   /*to see the container:*/
-   background-color: plum;
-   /*move around main axis...Default is row/horizontal:*/
-   justify-content: space-between;
-   /*height:50px; --for the pattern from back*/
-   /*Now it's time to move with the cross axis..Default is column/vertical:*/
-   /*first add more height to show/fit vertical change:*/
-   height:400px;
-   /*Now move with cross axis:*/
-   align-items:center;
-
+img{
+    /*max-width: sets the maximum width of an element. It prevents the used value of the width property from becoming larger than the value specified by max-width.
+    --sounds good for responsiveness*/
+    max-width:100%; /*of it's parent(div class container)*/
 }
 
-/*grabs all elements with the class of items AKA the flex items(in this case)*/
-.item{
-    width:100px;
-    height:100px;
-    background-color:darkslateblue;
-    border:3px solid gold;
-    color:lime;
-    /*all around add space:*/
-    margin:10px;
-    display:flex;
-      /*flex-basis is the width as in the starting point 
-        of the width when using other flex features like flex-shrink
-        (can be used instead of width)*/
-    flex-basis: 300px;
-    /*Can add flex:grow; here too to make all items 
-    grow in the same way*/
-    /*combning it all together(widths):*/
-    flex: 2 0 400px;
+.cointainer{
+    max-width:1100px; /*so width ccan;t get any bigger than this*/
+    /*place all containers in the middle*/
+    margin-top:0;
+    margin-bottom:0;
+    margin-left: auto;
+    margin-right: auto;
+    /*AKA: margin: 0 auto;*/
 }
-
-/*moving around a specific item:(use align-self)
-:nth-of-type(1) -- grabs an element more specifically*/
-.item:nth-of-type(1){
-/*lets add a growing rate 0 is the default but has options 1,2,3
-will take up the entire space(in width) of the flex container
-when minimized it goes back to the flex basis(starting width)
-another great tool for responsiveness
- flex-grow:1;      */
-
-/*for centering text:*/
-justify-content:center;
-align-items: center;
-
-}
-
-.item:nth-of-type(2){
-/*I can change the width/ flex-basis by specific items as well!:*/
-   flex-basis: 200px;
-   /*for centering text:*/
-   justify-content:center;
-   align-items: center;
-   /*flex-property is a combination of grow,shrink, and basis--
-   --in other words...
-   flex: grow# shrink# flex-basis#;("flex-basis#" is OPTIONAL)*/
-   flex: 1 0 100px;
-}
-
-.item:nth-of-type(3){
-    /*similar to flex-grow but shrinks instead 
-    as window gets smaller the items shrink at different rates(if applie)
-  flex-shrink: 2;      */
-    /*for centering text:*/
-   justify-content:center;
-   align-items: center;
-}
-
-/*
-****WEB DEV NOTES:****
-divs take up the entire area of content 
-I like to say it takes up the entire web page /
-space depended on content
-...unless:
-you specify it's size using width of height
-...However if there is no content:
-then it will take the entire section of a webpage
-
-*/
-
-/* for a nice pattern.back{
-    background-color: blanchedalmond;
-    height:100px;
-}*/
