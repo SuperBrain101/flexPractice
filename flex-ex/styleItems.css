@@ -27,14 +27,143 @@ img{
     /*max-width: sets the maximum width of an element. It prevents the used value of the width property from becoming larger than the value specified by max-width.
     --sounds good for responsiveness*/
     max-width:100%; /*of it's parent(div class container)*/
+   
 }
 
-.cointainer{
-    max-width:1100px; /*so width ccan;t get any bigger than this*/
+nav .container{
+    max-width:1100px; /*so width can;t get any bigger than this*/
     /*place all containers in the middle*/
     margin-top:0;
     margin-bottom:0;
     margin-left: auto;
     margin-right: auto;
     /*AKA: margin: 0 auto;*/
+    /*WHY USE MARGIN WHEN USING DISPLAY:FLEX;? :
+    so pretty much u first center the container(margin 0 auto;) 
+    to then center the items within the container(display:flex;)*/
+
+    /*add more space inside content AKA: padding:
+    (b/c didn't look centered enough before even though centered using margin*/
+    padding:0 30px;
+
+    /*spread apart ul to match new height of nav*/
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    /*u want*/
+    /*add height to add more space so that the center in align-items 
+    in the flex container is shown(otherwise the center is 
+    never shown and items are just at the top):*/
+    height:100%;
+}
+
+nav .navbar a{
+    /*writing .navbar a is better than just writing a as a css selector 
+    because it specifies for the a specifically inside the class
+    navbar(the ul element) so if you were to reuse this css not just
+    any a element will receive this styling...*/
+    text-decoration:none;
+    color: rgba(36, 2, 72, 0.659);
+    
+}
+
+nav{
+    /*background:rgba(0,225,115,0.4);
+    --different color option*/
+    background-color:rgba(149,130,255, 0.6);
+    /*change the background color height*/
+    height:60px;
+}
+
+nav ul{
+    list-style-type: none;
+    display:flex;
+    
+}
+
+nav .logo{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+nav ul li{
+    /*don't forget to add the ul THEN LI*/
+    margin-left:20px;
+
+}
+
+nav ul a:hover{
+    color:rgb(0, 255, 115);
+    font-size:x-large;
+}
+
+header{
+    background-color: rgba(72, 14, 188, 0.192);
+    min-height:400px;
+}
+
+header h1{
+    font-size: 3em;
+    font-weight:bold;
+    /*when smaller to keep the h1 within the same space per line
+     from one another use:(40:33 --on youtube if confused)*/
+     line-height:1em;
+}
+
+header img{
+    /*min-height, max-width,line-height: are properties that
+    ensures responsiveness!!!;*/
+    max-width:400px;
+}
+
+header .container{
+    display:flex;
+    /*make it look like a column*/
+    flex-direction: column;
+    /*cross axis / column*/
+    justify-content: space-around;
+    /*main axis/row*/
+    align-items: center;
+    height:600px;
+    margin-bottom: 80px;
+    /*aligns the text so that it centers as well!*/
+    text-align:center;
+}
+
+/*if flex direction doesn't work:
+1: check what the container is(make sure it's written correctly in css)
+and see what the items are
+2: check padding and/or height of container to ensure there is spacing
+for the items to move
+3: get the items themselves and display flex inside the items
+4: if it is somewhat okay just add margin to center it out more
+5:Be aware of default styles applied by browsers.
+6: RE-Review this video and/or the box model
+P.S.7: if display:inline; makes the content go weird
+try to handle it with display:flex; instead
+8:if text never align the way you think then just use 
+the property text align instead!*/
+
+section .box{
+    background-color: rgba(72, 14, 188, 0.192);
+    height:350px;
+    border-radius: 50px;
+    /*20px top & bottom
+    10px LEFT AND RIGHT*/
+    margin: 20px 10px;
+    /*center inside :*/
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+section .container{
+    display:flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    
+
 }
